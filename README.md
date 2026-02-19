@@ -130,13 +130,16 @@ Interactive docs: **http://localhost:8000/docs**
 mosaic_task/
 ├── src/
 │   └── rectangle_analyzer/
-│       ├── __init__.py        # public exports
-│       ├── analyzer.py        # RectangleAnalyzer core class
-│       ├── api.py             # FastAPI application
+│       ├── __init__.py           # public exports
+│       ├── analyzer.py           # RectangleAnalyzer core class
+│       ├── api.py                # FastAPI application
+│       ├── templates/
+│       │   └── index.html        # HTML page
 │       └── static/
-│           └── index.html     # Web UI (vanilla JS + Canvas)
+│           ├── style.css         # styles
+│           └── app.js            # canvas + API logic
 ├── tests/
-│   └── test_rectangles.py     # pytest test suite
+│   └── test_rectangles.py        # pytest test suite
 ├── Dockerfile
 ├── .dockerignore
 ├── pyproject.toml
