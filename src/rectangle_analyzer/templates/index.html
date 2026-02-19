@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rectangle Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<header>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+    <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+  </svg>
+  <h1>Rectangle Analyzer</h1>
+  <span>2D Overlap &amp; Coverage Tool</span>
+</header>
+
+<main>
+  <!-- LEFT -->
+  <div class="panel">
+    <div class="panel-header">Rectangles</div>
+    <div class="rect-list" id="rectList"></div>
+    <button class="add-btn" id="addBtn">+ Add rectangle</button>
+    <button class="analyze-btn" id="analyzeBtn">Analyze</button>
+    <div class="error-msg" id="errorMsg" style="display:none"></div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="canvas-wrap" id="canvasWrap">
+      <canvas id="canvas"></canvas>
+      <div class="canvas-hint" id="canvasHint">Add rectangles and click Analyze</div>
+    </div>
+    <div class="results-bar" id="resultsBar" style="display:none"></div>
+  </div>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+[project]
+name = "rectangle-analyzer"
+version = "0.1.0"
+description = "Analyzes rectangles placed on a 2D plane, finding overlaps and calculating coverage statistics."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.29",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "httpx>=0.27",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rectangle_analyzer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "httpx>=0.27",
+]
